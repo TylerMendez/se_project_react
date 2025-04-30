@@ -5,7 +5,7 @@ function ModalWithForm({ children, buttonText, title, activeModal, onClose }) {
       <div className={`modal ${activeModal === 'add-garment' ? 'modal_opened' : ''}`}>
         <div className="modal__content">
           <h2 className="modal__title">{title}</h2>
-          <button onClick={onClose} type="button" className="modal__close" aria-label="Close modal">Close</button>
+          <button onClick={onClose} type="button" className="modal__close-btn" aria-label="Close modal"></button>
           <form className="modal__form" onSubmit={(e) => e.preventDefault()}>
             {children}
             <button type="submit" className="modal__submit">{buttonText}</button>

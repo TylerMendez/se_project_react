@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { coordinates, APIkey } from '../utils/constants';
+import { coordinates, APIkey } from '../../utils/constants';
 import './App.css';
-import Header from './Header/Header';
-import Main from './Main/Main';
-import ModalWithForm from './ModalWithForm/ModalWithForm';
-import ItemModal from './ItemModal/ItemModal';
-import Footer from './Footer/Footer';
-import { getWeather, filterweatherData } from '../utils/weatherAPi'; 
+import Header from '../Header/Header';
+import Main from '../Main/Main';
+import ModalWithForm from '../ModalWithForm/ModalWithForm';
+import ItemModal from '../ItemModal/ItemModal';
+import Footer from '../Footer/Footer';
+import { getWeather, filterweatherData } from '../../utils/weatherAPi'; 
 import { use } from 'react';
 
 function App() {
@@ -48,10 +48,9 @@ function App() {
           >
             <button
               type="button"
-              className="modal__close"
+              className="modal__close-btn"
               onClick={closeActiveModal}
-            >
-              Close
+            > X
             </button>
 
             <label htmlFor="name" className="modal__label">
