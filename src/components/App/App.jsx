@@ -7,12 +7,11 @@ import ModalWithForm from '../ModalWithForm/ModalWithForm';
 import ItemModal from '../ItemModal/ItemModal';
 import Footer from '../Footer/Footer';
 import { getWeather, filterweatherData } from '../../utils/weatherAPi'; 
-import { use } from 'react';
 
 function App() {
   const [weatherData, setWeatherData] = useState({ type: "", temp: {F: 999},
       city: "" });
-  const [activeModal, setActiveModal] = useState(null); 
+  const [activeModal, setActiveModal] = useState(""); 
   const [selectedCard, setSelectedCard] = useState({});
 
   const handleCardClick = (card) => {
@@ -46,13 +45,6 @@ function App() {
             buttonText="Add Garment"
             onClose={closeActiveModal}
           >
-            <button
-              type="button"
-              className="modal__close-btn"
-              onClick={closeActiveModal}
-            > X
-            </button>
-
             <label htmlFor="name" className="modal__label">
               Name
               <input
